@@ -26,9 +26,9 @@ export function createWasmFn <C extends WasmBaseInstance> (root: 'crypto', wasmB
         throw new Error('WebAssembly is not available in your environment');
       }
 
-      const source = await WebAssembly.instantiate(wasmBytes, { wbg });
+      const source = await WebAssembly.instantiate(wasmBytes, { wbg }) as unknown as { instance: { exports: C } };
 
-      result.wasm = source.instance.exports as unknown as C;
+      result.wasm = source.instance.exports;
       result.type = 'wasm';
     } catch (error) {
       // if we have a valid supplied asm.js, return that

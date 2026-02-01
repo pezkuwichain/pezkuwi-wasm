@@ -1,5 +1,5 @@
 {
-  "author": "Jaco Greeff <jacogr@gmail.com>",
+  "author": "PezkuwiChain <dev@pezkuwichain.io>",
   "bugs": "https://github.com/pezkuwichain/pezkuwi-wasm/issues",
   "description": "Asm.js content for wasm-crypto",
   "engines": {
@@ -18,7 +18,7 @@
     "./packageDetect.cjs"
   ],
   "type": "module",
-  "version": "7.5.5",
+  "version": "7.5.9",
   "main": "index.js",
   "dependencies": {
     "tslib": "^2.7.0"

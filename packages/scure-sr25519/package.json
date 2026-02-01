@@ -1,6 +1,6 @@
 {
   "name": "@pezkuwi/scure-sr25519",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "SR25519 cryptography for PezkuwiChain with bizinikiwi signing context",
   "main": "lib/index.js",
   "module": "lib/esm/index.js",
@@ -22,6 +22,6 @@
   },
   "bugs": "https://github.com/pezkuwichain/pezkuwi-wasm/issues",
   "homepage": "https://github.com/pezkuwichain/pezkuwi-wasm/tree/main/packages/scure-sr25519#readme",
-  "author": "PezkuwiChain",
+  "author": "PezkuwiChain <dev@pezkuwichain.io>",
   "license": "MIT"
 }

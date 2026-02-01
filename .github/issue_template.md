@@ -1,9 +1,9 @@
 <!--
 
 For general support, howto, coding and bundling questions, please
-use the Substrate & Polkadot StackExchange at
+use the PezkuwiChain Discord at
 
-  https://substrate.stackexchange.com/
+  https://discord.gg/Y3VyEC6h8W
 
 and get other ecosystem developers involved. This issues in this
 repository are meant for the tracking of feature requests and bug

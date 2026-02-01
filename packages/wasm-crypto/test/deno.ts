@@ -10,6 +10,7 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore This should only run against the compiled ouput, where this should exist
 import * as wasm from '../build-deno/mod.ts';
+// @ts-ignore Test file, types not needed
 import { initRun, tests } from './all/index.js';
 
 type Tests = Record<string, (wasm: unknown) => void>;

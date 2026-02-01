@@ -14,4 +14,4 @@ These are split from the `pezkuwi/util` repo where it is heavily used as part of
 
 Contributions are welcome!
 
-To start off, this repo (along with others in the [@pezkuwi](https://github.com/pezkuwi/) family) uses yarn workspaces to organise the code. As such, after cloning, its dependencies _should_ be installed via `yarn`, not via npm; the latter will result in broken dependencies.
+To start off, this repo (along with others in the [@pezkuwichain](https://github.com/pezkuwichain/) family) uses yarn workspaces to organise the code. As such, after cloning, its dependencies _should_ be installed via `yarn`, not via npm; the latter will result in broken dependencies.

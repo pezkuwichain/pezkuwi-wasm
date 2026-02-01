@@ -7,7 +7,10 @@ export default [
   ...baseConfig,
   {
     ignores: [
-      'mod.ts'
+      'mod.ts',
+      '**/bytes.js',
+      '**/build/**',
+      '**/build-*/**'
     ]
   }
 ];

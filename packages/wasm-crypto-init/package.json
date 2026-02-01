@@ -1,5 +1,5 @@
 {
-  "author": "Jaco Greeff <jacogr@gmail.com>",
+  "author": "PezkuwiChain <dev@pezkuwichain.io>",
   "bugs": "https://github.com/pezkuwichain/pezkuwi-wasm/issues",
   "description": "Init handlers for wasm-crypto",
   "engines": {
@@ -18,15 +18,15 @@
     "./packageDetect.cjs"
   ],
   "type": "module",
-  "version": "7.5.5",
+  "version": "7.5.9",
   "browser": "wasm.js",
   "main": "wasm.js",
   "react-native": "asm.js",
   "dependencies": {
-    "@pezkuwi/wasm-bridge": "7.5.5",
-    "@pezkuwi/wasm-crypto-asmjs": "7.5.5",
-    "@pezkuwi/wasm-crypto-wasm": "7.5.5",
-    "@pezkuwi/wasm-util": "7.5.5",
+    "@pezkuwi/wasm-bridge": "7.5.9",
+    "@pezkuwi/wasm-crypto-asmjs": "7.5.9",
+    "@pezkuwi/wasm-crypto-wasm": "7.5.9",
+    "@pezkuwi/wasm-util": "7.5.9",
     "tslib": "^2.7.0"
   },
   "devDependencies": {

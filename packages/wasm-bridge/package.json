@@ -1,5 +1,5 @@
 {
-  "author": "Jaco Greeff <jacogr@gmail.com>",
+  "author": "PezkuwiChain <dev@pezkuwichain.io>",
   "bugs": "https://github.com/pezkuwichain/pezkuwi-wasm/issues",
   "description": "A bridge layer between JS and Wasm",
   "engines": {
@@ -18,10 +18,10 @@
     "./packageDetect.cjs"
   ],
   "type": "module",
-  "version": "7.5.5",
+  "version": "7.5.9",
   "main": "index.js",
   "dependencies": {
-    "@pezkuwi/wasm-util": "7.5.5",
+    "@pezkuwi/wasm-util": "7.5.9",
     "tslib": "^2.7.0"
   },
   "devDependencies": {

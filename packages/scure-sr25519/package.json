@@ -1,0 +1,24 @@
+{
+  "name": "@pezkuwi/scure-sr25519",
+  "version": "0.2.0",
+  "description": "SR25519 cryptography for PezkuwiChain with bizinikiwi signing context",
+  "main": "lib/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/esm/index.js",
+      "require": "./lib/index.js"
+    }
+  },
+  "dependencies": {
+    "@noble/curves": "~1.9.2",
+    "@noble/hashes": "~1.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pezkuwichain/pezkuwi-scure-sr25519"
+  },
+  "author": "PezkuwiChain",
+  "license": "MIT"
+}

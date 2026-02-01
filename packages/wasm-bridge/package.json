@@ -18,10 +18,10 @@
     "./packageDetect.cjs"
   ],
   "type": "module",
-  "version": "7.5.9",
+  "version": "7.5.10",
   "main": "index.js",
   "dependencies": {
-    "@pezkuwi/wasm-util": "7.5.9",
+    "@pezkuwi/wasm-util": "7.5.10",
     "tslib": "^2.7.0"
   },
   "devDependencies": {

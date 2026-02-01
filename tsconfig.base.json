@@ -1,0 +1,20 @@
+{
+  "extends": "@polkadot/dev/config/tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "paths": {
+      "@pezkuwi/wasm-bridge": ["wasm-bridge/src/index.ts"],
+      "@pezkuwi/wasm-bridge/*": ["wasm-bridge/src/*.ts"],
+      "@pezkuwi/wasm-crypto-asmjs": ["wasm-crypto-asmjs/src/index.ts"],
+      "@pezkuwi/wasm-crypto-asmjs/*": ["wasm-crypto-asmjs/src/*.ts"],
+      "@pezkuwi/wasm-crypto-wasm": ["wasm-crypto-wasm/src/index.ts"],
+      "@pezkuwi/wasm-crypto-wasm/*": ["wasm-crypto-wasm/src/*.ts"],
+      "@pezkuwi/wasm-crypto-init": ["wasm-crypto-init/src/wasm.ts"],
+      "@pezkuwi/wasm-crypto-init/*": ["wasm-crypto-init/src/*.ts"],
+      "@pezkuwi/wasm-crypto": ["wasm-crypto/src/index.ts"],
+      "@pezkuwi/wasm-crypto/*": ["wasm-crypto/src/*.ts"],
+      "@pezkuwi/wasm-util": ["wasm-util/src/index.ts"],
+      "@pezkuwi/wasm-util/*": ["wasm-util/src/*.ts"]
+    }
+  }
+ }

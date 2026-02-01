@@ -14,14 +14,105 @@
     "url": "https://github.com/pezkuwichain/pezkuwi-wasm.git"
   },
   "sideEffects": [
-    "./packageDetect.js",
-    "./packageDetect.cjs"
+    "./build/packageDetect.js",
+    "./build/cjs/packageDetect.js"
   ],
   "type": "module",
-  "version": "7.5.10",
-  "main": "index.js",
+  "types": "./build/index.d.ts",
+  "version": "7.5.15",
+  "main": "./build/cjs/index.js",
+  "module": "./build/index.js",
+  "exports": {
+    ".": {
+      "module": {
+        "types": "./build/index.d.ts",
+        "default": "./build/index.js"
+      },
+      "require": {
+        "types": "./build/cjs/index.d.ts",
+        "default": "./build/cjs/index.js"
+      },
+      "default": {
+        "types": "./build/index.d.ts",
+        "default": "./build/index.js"
+      }
+    },
+    "./bundle": {
+      "module": {
+        "types": "./build/bundle.d.ts",
+        "default": "./build/bundle.js"
+      },
+      "require": {
+        "types": "./build/cjs/bundle.d.ts",
+        "default": "./build/cjs/bundle.js"
+      },
+      "default": {
+        "types": "./build/bundle.d.ts",
+        "default": "./build/bundle.js"
+      }
+    },
+    "./bytes": {
+      "module": {
+        "types": "./build/bytes.d.ts",
+        "default": "./build/bytes.js"
+      },
+      "require": {
+        "types": "./build/cjs/bytes.d.ts",
+        "default": "./build/cjs/bytes.js"
+      },
+      "default": {
+        "types": "./build/bytes.d.ts",
+        "default": "./build/bytes.js"
+      }
+    },
+    "./cjs/*": "./build/cjs/*.js",
+    "./cjs/package.json": "./build/cjs/package.json",
+    "./package.json": "./package.json",
+    "./packageDetect": {
+      "module": {
+        "types": "./build/packageDetect.d.ts",
+        "default": "./build/packageDetect.js"
+      },
+      "require": {
+        "types": "./build/cjs/packageDetect.d.ts",
+        "default": "./build/cjs/packageDetect.js"
+      },
+      "default": {
+        "types": "./build/packageDetect.d.ts",
+        "default": "./build/packageDetect.js"
+      }
+    },
+    "./packageInfo": {
+      "module": {
+        "types": "./build/packageInfo.d.ts",
+        "default": "./build/packageInfo.js"
+      },
+      "require": {
+        "types": "./build/cjs/packageInfo.d.ts",
+        "default": "./build/cjs/packageInfo.js"
+      },
+      "default": {
+        "types": "./build/packageInfo.d.ts",
+        "default": "./build/packageInfo.js"
+      }
+    },
+    "./packageInfo.js": {
+      "module": {
+        "types": "./build/packageInfo.d.ts",
+        "default": "./build/packageInfo.js"
+      },
+      "require": {
+        "types": "./build/cjs/packageInfo.d.ts",
+        "default": "./build/cjs/packageInfo.js"
+      },
+      "default": {
+        "types": "./build/packageInfo.d.ts",
+        "default": "./build/packageInfo.js"
+      }
+    }
+  },
   "dependencies": {
-    "@pezkuwi/wasm-util": "7.5.10",
+    "@pezkuwi/wasm-util": "7.5.15",
     "tslib": "^2.7.0"
   },
   "devDependencies": {

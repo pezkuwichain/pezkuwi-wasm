@@ -14,19 +14,197 @@
     "url": "https://github.com/pezkuwichain/pezkuwi-wasm.git"
   },
   "sideEffects": [
-    "./packageDetect.js",
-    "./packageDetect.cjs"
+    "./build/packageDetect.js",
+    "./build/cjs/packageDetect.js"
   ],
   "type": "module",
-  "version": "7.5.10",
-  "browser": "wasm.js",
-  "main": "wasm.js",
-  "react-native": "asm.js",
+  "types": "./build/wasm.d.ts",
+  "version": "7.5.15",
+  "browser": "./build/cjs/wasm.js",
+  "main": "./build/cjs/wasm.js",
+  "module": "./build/wasm.js",
+  "react-native": "./build/cjs/asm.js",
+  "exports": {
+    ".": {
+      "types": "./build/wasm.d.ts",
+      "react-native": {
+        "module": {
+          "types": "./build/asm.d.ts",
+          "default": "./build/asm.js"
+        },
+        "require": {
+          "types": "./build/cjs/asm.d.ts",
+          "default": "./build/cjs/asm.js"
+        },
+        "default": {
+          "types": "./build/asm.d.ts",
+          "default": "./build/asm.js"
+        }
+      },
+      "browser": {
+        "module": {
+          "types": "./build/wasm.d.ts",
+          "default": "./build/wasm.js"
+        },
+        "require": {
+          "types": "./build/cjs/wasm.d.ts",
+          "default": "./build/cjs/wasm.js"
+        },
+        "default": {
+          "types": "./build/wasm.d.ts",
+          "default": "./build/wasm.js"
+        }
+      },
+      "node": {
+        "module": {
+          "types": "./build/wasm.d.ts",
+          "default": "./build/wasm.js"
+        },
+        "require": {
+          "types": "./build/cjs/wasm.d.ts",
+          "default": "./build/cjs/wasm.js"
+        },
+        "default": {
+          "types": "./build/wasm.d.ts",
+          "default": "./build/wasm.js"
+        }
+      }
+    },
+    "./asm": {
+      "module": {
+        "types": "./build/asm.d.ts",
+        "default": "./build/asm.js"
+      },
+      "require": {
+        "types": "./build/cjs/asm.d.ts",
+        "default": "./build/cjs/asm.js"
+      },
+      "default": {
+        "types": "./build/asm.d.ts",
+        "default": "./build/asm.js"
+      }
+    },
+    "./both": {
+      "module": {
+        "types": "./build/both.d.ts",
+        "default": "./build/both.js"
+      },
+      "require": {
+        "types": "./build/cjs/both.d.ts",
+        "default": "./build/cjs/both.js"
+      },
+      "default": {
+        "types": "./build/both.d.ts",
+        "default": "./build/both.js"
+      }
+    },
+    "./bundle": {
+      "module": {
+        "types": "./build/bundle.d.ts",
+        "default": "./build/bundle.js"
+      },
+      "require": {
+        "types": "./build/cjs/bundle.d.ts",
+        "default": "./build/cjs/bundle.js"
+      },
+      "default": {
+        "types": "./build/bundle.d.ts",
+        "default": "./build/bundle.js"
+      }
+    },
+    "./cjs/*": "./build/cjs/*.js",
+    "./cjs/package.json": "./build/cjs/package.json",
+    "./none": {
+      "module": {
+        "types": "./build/none.d.ts",
+        "default": "./build/none.js"
+      },
+      "require": {
+        "types": "./build/cjs/none.d.ts",
+        "default": "./build/cjs/none.js"
+      },
+      "default": {
+        "types": "./build/none.d.ts",
+        "default": "./build/none.js"
+      }
+    },
+    "./package.json": "./package.json",
+    "./packageDetect": {
+      "module": {
+        "types": "./build/packageDetect.d.ts",
+        "default": "./build/packageDetect.js"
+      },
+      "require": {
+        "types": "./build/cjs/packageDetect.d.ts",
+        "default": "./build/cjs/packageDetect.js"
+      },
+      "default": {
+        "types": "./build/packageDetect.d.ts",
+        "default": "./build/packageDetect.js"
+      }
+    },
+    "./packageInfo": {
+      "module": {
+        "types": "./build/packageInfo.d.ts",
+        "default": "./build/packageInfo.js"
+      },
+      "require": {
+        "types": "./build/cjs/packageInfo.d.ts",
+        "default": "./build/cjs/packageInfo.js"
+      },
+      "default": {
+        "types": "./build/packageInfo.d.ts",
+        "default": "./build/packageInfo.js"
+      }
+    },
+    "./packageInfo.js": {
+      "module": {
+        "types": "./build/packageInfo.d.ts",
+        "default": "./build/packageInfo.js"
+      },
+      "require": {
+        "types": "./build/cjs/packageInfo.d.ts",
+        "default": "./build/cjs/packageInfo.js"
+      },
+      "default": {
+        "types": "./build/packageInfo.d.ts",
+        "default": "./build/packageInfo.js"
+      }
+    },
+    "./types": {
+      "module": {
+        "types": "./build/types.d.ts",
+        "default": "./build/types.js"
+      },
+      "require": {
+        "types": "./build/cjs/types.d.ts",
+        "default": "./build/cjs/types.js"
+      },
+      "default": {
+        "types": "./build/types.d.ts",
+        "default": "./build/types.js"
+      }
+    },
+    "./wasm": {
+      "module": {
+        "types": "./build/wasm.d.ts",
+        "default": "./build/wasm.js"
+      },
+      "require": {
+        "types": "./build/cjs/wasm.d.ts",
+        "default": "./build/cjs/wasm.js"
+      },
+      "default": {
+        "types": "./build/wasm.d.ts",
+        "default": "./build/wasm.js"
+      }
+    }
+  },
   "dependencies": {
-    "@pezkuwi/wasm-bridge": "7.5.10",
-    "@pezkuwi/wasm-crypto-asmjs": "7.5.10",
-    "@pezkuwi/wasm-crypto-wasm": "7.5.10",
-    "@pezkuwi/wasm-util": "7.5.10",
+    "@pezkuwi/wasm-bridge": "7.5.15",
+    "@pezkuwi/wasm-crypto-asmjs": "7.5.15",
+    "@pezkuwi/wasm-crypto-wasm": "7.5.15",
+    "@pezkuwi/wasm-util": "7.5.15",
     "tslib": "^2.7.0"
   },
   "devDependencies": {

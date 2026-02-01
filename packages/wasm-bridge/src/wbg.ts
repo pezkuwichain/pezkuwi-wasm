@@ -56,6 +56,11 @@ export class Wbg<C extends WasmBaseInstance> {
     return this.#bridge.addObject(DEFAULT_SELF);
   };
 
+  /** @internal - bizinikiwi wasm hash */
+  __wbg_self_7eede1f4488bf346 = (): number => {
+    return this.#bridge.addObject(DEFAULT_SELF);
+  };
+
   /** @internal - old hash for compatibility */
   __wbg_self_1b7a39e3a92c949c = (): number => {
     return this.#bridge.addObject(DEFAULT_SELF);
@@ -66,6 +71,11 @@ export class Wbg<C extends WasmBaseInstance> {
     throw new Error(`Unable to require ${this.#bridge.getString(ptr, len)}`);
   };
 
+  /** @internal - bizinikiwi wasm hash */
+  __wbg_require_900d5c3984fe7703 = (ptr: number, len: number, _extra: number): never => {
+    throw new Error(`Unable to require ${this.#bridge.getString(ptr, len)}`);
+  };
+
   /** @internal - old hash for compatibility */
   __wbg_require_604837428532a733 = (ptr: number, len: number): never => {
     throw new Error(`Unable to require ${this.#bridge.getString(ptr, len)}`);
@@ -73,6 +83,11 @@ export class Wbg<C extends WasmBaseInstance> {
 
   /** @internal - new hash */
   __wbg_crypto_038798f665f985e2 = (_idx: number): number => {
+    return this.#bridge.addObject(DEFAULT_CRYPTO);
+  };
+
+  /** @internal - bizinikiwi wasm hash */
+  __wbg_crypto_c909fb428dcbddb6 = (_idx: number): number => {
     return this.#bridge.addObject(DEFAULT_CRYPTO);
   };
 
@@ -87,8 +102,18 @@ export class Wbg<C extends WasmBaseInstance> {
     return this.#bridge.addObject(undefined);
   };
 
+  /** @internal - bizinikiwi wasm hash */
+  __wbg_msCrypto_511eefefbfc70ae4 = (_idx: number): number => {
+    return this.#bridge.addObject(undefined);
+  };
+
   /** @internal - new hash */
   __wbg_getRandomValues_7dfe5bd1b67c9ca1 = (_idx: number): number => {
+    return this.#bridge.addObject(DEFAULT_CRYPTO.getRandomValues);
+  };
+
+  /** @internal - bizinikiwi wasm hash */
+  __wbg_getRandomValues_307049345d0bd88c = (_idx: number): number => {
     return this.#bridge.addObject(DEFAULT_CRYPTO.getRandomValues);
   };
 
@@ -102,6 +127,11 @@ export class Wbg<C extends WasmBaseInstance> {
     DEFAULT_CRYPTO.getRandomValues(this.#bridge.getU8a(ptr, len));
   };
 
+  /** @internal - bizinikiwi wasm hash (2 arg version) */
+  __wbg_getRandomValues_cd175915511f705e = (ptr: number, len: number): void => {
+    DEFAULT_CRYPTO.getRandomValues(this.#bridge.getU8a(ptr, len));
+  };
+
   /** @internal - old hash for compatibility */
   __wbg_getRandomValues_f5e14ab7ac8e995d = (_arg0: number, ptr: number, len: number): void => {
     DEFAULT_CRYPTO.getRandomValues(this.#bridge.getU8a(ptr, len));
@@ -109,6 +139,11 @@ export class Wbg<C extends WasmBaseInstance> {
 
   /** @internal - new hash */
   __wbg_randomFillSync_994ac6d9ade7a695 = (_idx: number, _ptr: number, _len: number): never => {
+    throw new Error('randomFillSync is not available');
+  };
+
+  /** @internal - bizinikiwi wasm hash */
+  __wbg_randomFillSync_85b3f4c52c56c313 = (_idx: number, _ptr: number, _len: number): never => {
     throw new Error('randomFillSync is not available');
   };
 
@@ -132,14 +167,31 @@ export class Wbg<C extends WasmBaseInstance> {
     return this.#bridge.addObject(new Uint8Array(len));
   };
 
+  /** @internal - bizinikiwi wasm hash */
+  __wbg_newwithlength_728575f3bba9959b = (len: number): number => {
+    return this.#bridge.addObject(new Uint8Array(len));
+  };
+
   /** @internal - new: Uint8Array.subarray */
   __wbg_subarray_a96e1fef17ed23cb = (idx: number, start: number, end: number): number => {
     const arr = this.#bridge.getObject(idx) as Uint8Array;
     return this.#bridge.addObject(arr.subarray(start, end));
   };
 
+  /** @internal - bizinikiwi wasm hash */
+  __wbg_subarray_7f7a652672800851 = (idx: number, start: number, end: number): number => {
+    const arr = this.#bridge.getObject(idx) as Uint8Array;
+    return this.#bridge.addObject(arr.subarray(start, end));
+  };
+
   /** @internal - new: Uint8Array.length */
   __wbg_length_32ed9a279acd054c = (idx: number): number => {
+    const arr = this.#bridge.getObject(idx) as Uint8Array;
+    return arr.length;
+  };
+
+  /** @internal - bizinikiwi wasm hash */
+  __wbg_length_f0764416ba5bb237 = (idx: number): number => {
     const arr = this.#bridge.getObject(idx) as Uint8Array;
     return arr.length;
   };
@@ -154,5 +206,29 @@ export class Wbg<C extends WasmBaseInstance> {
   /** @internal - new: init externref table */
   __wbindgen_init_externref_table = (): void => {
     // No-op, externref table is initialized by the runtime
+  };
+
+  /** @internal - bizinikiwi wasm: memory accessor */
+  __wbindgen_memory = (): WebAssembly.Memory => {
+    return this.#bridge.wasm?.memory as WebAssembly.Memory;
+  };
+
+  /** @internal - bizinikiwi wasm: buffer accessor */
+  __wbg_buffer_5d1b598a01b41a42 = (memIdx: number): number => {
+    const mem = this.#bridge.getObject(memIdx) as WebAssembly.Memory;
+    return this.#bridge.addObject(mem.buffer);
+  };
+
+  /** @internal - bizinikiwi wasm: Uint8Array constructor */
+  __wbg_new_ace717933ad7117f = (bufferIdx: number): number => {
+    const buffer = this.#bridge.getObject(bufferIdx) as ArrayBuffer;
+    return this.#bridge.addObject(new Uint8Array(buffer));
+  };
+
+  /** @internal - bizinikiwi wasm: Uint8Array.set */
+  __wbg_set_74906aa30864df5a = (destIdx: number, srcIdx: number, offset: number): void => {
+    const dest = this.#bridge.getObject(destIdx) as Uint8Array;
+    const src = this.#bridge.getObject(srcIdx) as Uint8Array;
+    dest.set(src, offset);
   };
 }

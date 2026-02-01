@@ -14,14 +14,147 @@
     "url": "https://github.com/pezkuwichain/pezkuwi-wasm.git"
   },
   "sideEffects": [
-    "./packageDetect.js",
-    "./packageDetect.cjs"
+    "./build/packageDetect.js",
+    "./build/cjs/packageDetect.js"
   ],
   "type": "module",
-  "version": "7.5.10",
-  "main": "index.js",
+  "types": "./build/index.d.ts",
+  "version": "7.5.15",
+  "main": "./build/cjs/index.js",
+  "module": "./build/index.js",
+  "exports": {
+    ".": {
+      "module": {
+        "types": "./build/index.d.ts",
+        "default": "./build/index.js"
+      },
+      "require": {
+        "types": "./build/cjs/index.d.ts",
+        "default": "./build/cjs/index.js"
+      },
+      "default": {
+        "types": "./build/index.d.ts",
+        "default": "./build/index.js"
+      }
+    },
+    "./bridge": {
+      "module": {
+        "types": "./build/bridge.d.ts",
+        "default": "./build/bridge.js"
+      },
+      "require": {
+        "types": "./build/cjs/bridge.d.ts",
+        "default": "./build/cjs/bridge.js"
+      },
+      "default": {
+        "types": "./build/bridge.d.ts",
+        "default": "./build/bridge.js"
+      }
+    },
+    "./bundle": {
+      "module": {
+        "types": "./build/bundle.d.ts",
+        "default": "./build/bundle.js"
+      },
+      "require": {
+        "types": "./build/cjs/bundle.d.ts",
+        "default": "./build/cjs/bundle.js"
+      },
+      "default": {
+        "types": "./build/bundle.d.ts",
+        "default": "./build/bundle.js"
+      }
+    },
+    "./cjs/*": "./build/cjs/*.js",
+    "./cjs/package.json": "./build/cjs/package.json",
+    "./init": {
+      "module": {
+        "types": "./build/init.d.ts",
+        "default": "./build/init.js"
+      },
+      "require": {
+        "types": "./build/cjs/init.d.ts",
+        "default": "./build/cjs/init.js"
+      },
+      "default": {
+        "types": "./build/init.d.ts",
+        "default": "./build/init.js"
+      }
+    },
+    "./package.json": "./package.json",
+    "./packageDetect": {
+      "module": {
+        "types": "./build/packageDetect.d.ts",
+        "default": "./build/packageDetect.js"
+      },
+      "require": {
+        "types": "./build/cjs/packageDetect.d.ts",
+        "default": "./build/cjs/packageDetect.js"
+      },
+      "default": {
+        "types": "./build/packageDetect.d.ts",
+        "default": "./build/packageDetect.js"
+      }
+    },
+    "./packageInfo": {
+      "module": {
+        "types": "./build/packageInfo.d.ts",
+        "default": "./build/packageInfo.js"
+      },
+      "require": {
+        "types": "./build/cjs/packageInfo.d.ts",
+        "default": "./build/cjs/packageInfo.js"
+      },
+      "default": {
+        "types": "./build/packageInfo.d.ts",
+        "default": "./build/packageInfo.js"
+      }
+    },
+    "./packageInfo.js": {
+      "module": {
+        "types": "./build/packageInfo.d.ts",
+        "default": "./build/packageInfo.js"
+      },
+      "require": {
+        "types": "./build/cjs/packageInfo.d.ts",
+        "default": "./build/cjs/packageInfo.js"
+      },
+      "default": {
+        "types": "./build/packageInfo.d.ts",
+        "default": "./build/packageInfo.js"
+      }
+    },
+    "./types": {
+      "module": {
+        "types": "./build/types.d.ts",
+        "default": "./build/types.js"
+      },
+      "require": {
+        "types": "./build/cjs/types.d.ts",
+        "default": "./build/cjs/types.js"
+      },
+      "default": {
+        "types": "./build/types.d.ts",
+        "default": "./build/types.js"
+      }
+    },
+    "./wbg": {
+      "module": {
+        "types": "./build/wbg.d.ts",
+        "default": "./build/wbg.js"
+      },
+      "require": {
+        "types": "./build/cjs/wbg.d.ts",
+        "default": "./build/cjs/wbg.js"
+      },
+      "default": {
+        "types": "./build/wbg.d.ts",
+        "default": "./build/wbg.js"
+      }
+    }
+  },
   "dependencies": {
-    "@pezkuwi/wasm-util": "7.5.10",
+    "@pezkuwi/wasm-util": "7.5.15",
     "tslib": "^2.7.0"
   },
   "devDependencies": {

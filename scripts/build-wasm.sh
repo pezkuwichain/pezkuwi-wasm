@@ -5,7 +5,7 @@
 
 set -e
 
-source ../scripts/rust-version.sh
+source scripts/rust-version.sh
 
 WSM=$PKG_NAME/build-wasm/wasm_bg.wasm
 OPT=$PKG_NAME/build-wasm/wasm_opt.wasm
@@ -19,7 +19,7 @@ cd $PKG_NAME
 if [ "$RUST_VER" == "stable" ]; then
   RUSTC_BOOTSTRAP=1 cargo build --target wasm32-unknown-unknown --release -Z build-std=std,panic_abort
 else
-  rustup run $RUST_VER xargo build --target wasm32-unknown-unknown --release --locked
+  rustup run $RUST_VER xargo build --target wasm32-unknown-unknown --release
 fi
 cd ..
 

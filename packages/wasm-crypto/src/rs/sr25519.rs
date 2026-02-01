@@ -1,9 +1,9 @@
 // Copyright 2019-2025 @pezkuwi/wasm-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-// Based on original work by Paritytech (https://github.com/paritytech/schnorrkel-js/)
+// Based on original work by Paritytech (https://github.com/pezkuwichain/schnorrkel-js/)
 // Adapted for PezkuwiChain by Kurdistan Tech Institute
-// Original fork history: paritytech/schnorrkel-js → polkadot-js/schnorrkel-js → pezkuwi/wasm
+// Original fork history: pezkuwichain/schnorrkel-js → pezkuwi-js/schnorrkel-js → pezkuwi/wasm
 
 use curve25519_dalek::scalar::Scalar;
 use schnorrkel::{
@@ -13,7 +13,7 @@ use schnorrkel::{
 use wasm_bindgen::prelude::*;
 
 // We must make sure that this is the same as declared in the bizinikiwi source code.
-// PezkuwiChain uses "bizinikiwi" as the signing context instead of "substrate".
+// PezkuwiChain uses "bizinikiwi" as the signing context instead of "bizinikiwi".
 const CTX: &'static [u8] = b"bizinikiwi";
 
 /// ChainCode construction helper

@@ -1,7 +1,7 @@
-// Copyright 2019-2025 @pezkuwi/wasm-crypto authors & contributors
+// Copyright 2019-2026 @pezkuwi/wasm-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-/// <reference types="@polkadot/dev-test/globals.d.ts" />
+/// <reference types="@pezkuwi/dev-test/globals.d.ts" />
 
 // NOTE We don't use ts-expect-error here since the build folder may or may
 // not exist (so the error may or may not be there)

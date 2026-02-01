@@ -1,4 +1,4 @@
-// Copyright 2019-2025 @pezkuwi/wasm-util authors & contributors
+// Copyright 2019-2026 @pezkuwi/wasm-util authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 // MIT License
@@ -9,7 +9,7 @@
 // This only contains the unzlibSync function, no compression, no async, no workers
 //
 // These 2 issues are addressed as a short-term, stop-gap solution
-//   - https://github.com/polkadot-js/api/issues/2963
+//   - https://github.com/pezkuwi/api/issues/2963
 //   - https://github.com/101arrowz/fflate/issues/17
 //
 // Only tweaks made here are some TS adjustments (we use strict null checks),

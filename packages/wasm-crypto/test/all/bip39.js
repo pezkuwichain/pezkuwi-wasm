@@ -1,4 +1,4 @@
-// Copyright 2019-2025 @pezkuwi/wasm-crypto authors & contributors
+// Copyright 2019-2026 @pezkuwi/wasm-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 /* global it */
@@ -64,7 +64,7 @@ export function bip39ToEntropy (wasm) {
  */
 export function bip39ToMiniSecret (wasm) {
   it('creates the correct minisecret from a mnemonic', () => {
-    const res = u8aToHex(wasm.bip39ToMiniSecret('legal winner thank year wave sausage worth useful legal winner thank yellow', 'Substrate'));
+    const res = u8aToHex(wasm.bip39ToMiniSecret('legal winner thank year wave sausage worth useful legal winner thank yellow', 'Bizinikiwi'));
 
     // console.log('\tMIN', res);
 

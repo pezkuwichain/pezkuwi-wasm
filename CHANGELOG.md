@@ -4,48 +4,48 @@
 
 Changes:
 
-- Bump polkadot-js dependencies ([#605](https://github.com/polkadot-js/wasm/pull/605))
+- Bump pezkuwi dependencies ([#605](https://github.com/pezkuwichain/pezkuwi-wasm/pull/605))
 
 
 ## 7.5.3 Nov 24, 2025
 
 Changes:
 
-- Bump @polkadot dependencies ([#603](https://github.com/polkadot-js/wasm/pull/603))
+- Bump @pezkuwi dependencies ([#603](https://github.com/pezkuwichain/pezkuwi-wasm/pull/603))
 
 
 ## 7.5.2 Nov 10, 2025
 
 Changes:
 
-- Fix/Revert asm build ([#599](https://github.com/polkadot-js/wasm/pull/599))
-- Bump @polkadot dependencies ([#601](https://github.com/polkadot-js/wasm/pull/601))
+- Fix/Revert asm build ([#599](https://github.com/pezkuwichain/pezkuwi-wasm/pull/599))
+- Bump @pezkuwi dependencies ([#601](https://github.com/pezkuwichain/pezkuwi-wasm/pull/601))
 
 
 ## 7.5.1 aug 25, 2025
 
 Changes:
 
-- Bump yarn to 4.5.1 ([#573](https://github.com/polkadot-js/wasm/pull/573))
-- Update comments and labels from 2024 to 2025 ([#574](https://github.com/polkadot-js/wasm/pull/574))
-- Bump yarn to 4.6.0 ([#575](https://github.com/polkadot-js/wasm/pull/575))
-- Set execute for build script in CI ([#576](https://github.com/polkadot-js/wasm/pull/576))
-- Set permissions on all scripts ([#577](https://github.com/polkadot-js/wasm/pull/577))
-- Bump dev to 0.83.2 ([#578](https://github.com/polkadot-js/wasm/pull/578))
-- chore: added check in ext_secp_recover for signature normalization ([#579](https://github.com/polkadot-js/wasm/pull/579))
-- chore: Improve CI ([#580](https://github.com/polkadot-js/wasm/pull/580))
-- Revert CI improvements and wasm-bindgen version ([#583](https://github.com/polkadot-js/wasm/pull/583))
-- Added validation checks in PBKDF2 and Scrypt hashing functions ([#584](https://github.com/polkadot-js/wasm/pull/584))
-- Rollback wasm-bindgen version change ([#586](https://github.com/polkadot-js/wasm/pull/586))
-- Fix rust version to 1.84 ([#587](https://github.com/polkadot-js/wasm/pull/587))
-- Default to installed rust version ([#588](https://github.com/polkadot-js/wasm/pull/588))
-- Default to nightly rust version ([#589](https://github.com/polkadot-js/wasm/pull/589))
-- Ci Fix ([#590](https://github.com/polkadot-js/wasm/pull/590))
-- Read lock file ([#591](https://github.com/polkadot-js/wasm/pull/591))
-- Setup nightly as default ([#592](https://github.com/polkadot-js/wasm/pull/592))
-- Tweak install-build-deps.sh script ([#593](https://github.com/polkadot-js/wasm/pull/593))
-- Remove ASM build ([#594](https://github.com/polkadot-js/wasm/pull/594))
-- Bump @polkadot deps ([#595](https://github.com/polkadot-js/wasm/pull/595))
+- Bump yarn to 4.5.1 ([#573](https://github.com/pezkuwichain/pezkuwi-wasm/pull/573))
+- Update comments and labels from 2024 to 2025 ([#574](https://github.com/pezkuwichain/pezkuwi-wasm/pull/574))
+- Bump yarn to 4.6.0 ([#575](https://github.com/pezkuwichain/pezkuwi-wasm/pull/575))
+- Set execute for build script in CI ([#576](https://github.com/pezkuwichain/pezkuwi-wasm/pull/576))
+- Set permissions on all scripts ([#577](https://github.com/pezkuwichain/pezkuwi-wasm/pull/577))
+- Bump dev to 0.83.2 ([#578](https://github.com/pezkuwichain/pezkuwi-wasm/pull/578))
+- chore: added check in ext_secp_recover for signature normalization ([#579](https://github.com/pezkuwichain/pezkuwi-wasm/pull/579))
+- chore: Improve CI ([#580](https://github.com/pezkuwichain/pezkuwi-wasm/pull/580))
+- Revert CI improvements and wasm-bindgen version ([#583](https://github.com/pezkuwichain/pezkuwi-wasm/pull/583))
+- Added validation checks in PBKDF2 and Scrypt hashing functions ([#584](https://github.com/pezkuwichain/pezkuwi-wasm/pull/584))
+- Rollback wasm-bindgen version change ([#586](https://github.com/pezkuwichain/pezkuwi-wasm/pull/586))
+- Fix rust version to 1.84 ([#587](https://github.com/pezkuwichain/pezkuwi-wasm/pull/587))
+- Default to installed rust version ([#588](https://github.com/pezkuwichain/pezkuwi-wasm/pull/588))
+- Default to nightly rust version ([#589](https://github.com/pezkuwichain/pezkuwi-wasm/pull/589))
+- Ci Fix ([#590](https://github.com/pezkuwichain/pezkuwi-wasm/pull/590))
+- Read lock file ([#591](https://github.com/pezkuwichain/pezkuwi-wasm/pull/591))
+- Setup nightly as default ([#592](https://github.com/pezkuwichain/pezkuwi-wasm/pull/592))
+- Tweak install-build-deps.sh script ([#593](https://github.com/pezkuwichain/pezkuwi-wasm/pull/593))
+- Remove ASM build ([#594](https://github.com/pezkuwichain/pezkuwi-wasm/pull/594))
+- Bump @pezkuwi deps ([#595](https://github.com/pezkuwichain/pezkuwi-wasm/pull/595))
 
 
 ## 7.4.1 Oct 20, 2024
@@ -115,7 +115,7 @@ Changes:
 
 Changes:
 
-- Update to latest `@polkadot/dev` (w/ tsc jsx detection output changes)
+- Update to latest `@pezkuwi/dev` (w/ tsc jsx detection output changes)
 
 
 ## 7.0.1 Mar 4, 2023
@@ -217,7 +217,7 @@ Changes:
 
 Changes:
 
-- Swap from `libsecp256k1` to `secp256k1` (this aligns with the Substrate use)
+- Swap from `libsecp256k1` to `secp256k1` (this aligns with the Bizinikiwi use)
 - Adjust `wasm-crypto/init*` to also export `initWasm(): Promise<void>` (optional manual init)
 - Allow for `wasm-crypto/initNone` with no defined Wasm or Asm interfaces
 - Fix initialization on React Native with only ASM
@@ -225,12 +225,12 @@ Changes:
 
 ## 5.0.1 Mar 19, 2022
 
-- **Breaking change** For users of React Native, you are now required to add `import '@polkadot/wasm-crypto/initOnlyAsm'` at your project top-level to ensure that asm.js is initialized. (Or alternatively `import '@polkadot/wasm-crypto/initWasmAsm'` to future-proof when WASM does become available)
-- **Breaking change** For users who used to map the `data` and `empty` of the internal `wasm-crypto-{wasm, asmjs}` packages in their bundlers, swap to one of the `@polkadot/wasm-crypto/init*` top-level imports to set the type of interfaces you would prefer. A full writeup of the rationale and other options can be found [in the FAQ](https://polkadot.js.org/docs/util-crypto/FAQ#i-dont-have-wasm-available-in-my-environment)
+- **Breaking change** For users of React Native, you are now required to add `import '@pezkuwi/wasm-crypto/initOnlyAsm'` at your project top-level to ensure that asm.js is initialized. (Or alternatively `import '@pezkuwi/wasm-crypto/initWasmAsm'` to future-proof when WASM does become available)
+- **Breaking change** For users who used to map the `data` and `empty` of the internal `wasm-crypto-{wasm, asmjs}` packages in their bundlers, swap to one of the `@pezkuwi/wasm-crypto/init*` top-level imports to set the type of interfaces you would prefer. A full writeup of the rationale and other options can be found [in the FAQ](https://js.pezkuwichain.io/docs/util-crypto/FAQ#i-dont-have-wasm-available-in-my-environment)
 
 Changes:
 
-- Add (optional) `@polkadot/wasm-crypto/init{OnlyAsm, OnlyWasm, WasmAsm}` to allow specific interface types
+- Add (optional) `@pezkuwi/wasm-crypto/init{OnlyAsm, OnlyWasm, WasmAsm}` to allow specific interface types
 - Add work-around for lazy secp256k1 init in asm.js environments
 - Optimize asm.js output size
 - Use latest `wasm-bindgen`, `binaryen` & `wabt` packages in build
@@ -292,7 +292,7 @@ Changes:
 
 Changes:
 
-- Bump `@polkadot/dev` to allow for bundles with new-format
+- Bump `@pezkuwi/dev` to allow for bundles with new-format
 
 
 ## 4.1.1 Jul 7, 2021
@@ -363,13 +363,13 @@ Changes:
 
 ## 3.0.1 Dec 13, 2020
 
-**Important** This assumes `@polkadot/util` 5+ peerDependencies
+**Important** This assumes `@pezkuwi/util` 5+ peerDependencies
 **Important** While this package contains no external interface changes, it doe now compile and ship both cjs and esm modules. This means that modern bundlers will have more information for tree-shaking available. Additionally when using Node with `.mjs` extensions, the esm version imports will be used on recent Node versions. Adding an export map, as here, may have some impacts so a major semver bump is advised. There may be (small) dragons hiding in the dark corners...
 
 Changes:
 
 - Build and expose both cjs and esm via exports map
-- Split wasm and asmjs files into the `@polkadot/wasm-crypto-{wasm,asmjs}` packages
+- Split wasm and asmjs files into the `@pezkuwi/wasm-crypto-{wasm,asmjs}` packages
 - Add fflate WASM compression, with 180K raw savings (37K over-the-wire)
 - Convert the package to full TypeScript sources
 
@@ -379,7 +379,7 @@ Changes:
 Changes:
 
 - Rework generation of WASM interfaces (proper cross-platform JS support)
-- Remove explicit `crypto` dependency, this is now applied by `@polkadot/x-randomvalues`
+- Remove explicit `crypto` dependency, this is now applied by `@pezkuwi/x-randomvalues`
 - Build via xargo for panic abort, an overall small sizes without stack (Pinned nightly)
 - Move Rust library sources in to `rs/` subfolder
 
@@ -396,7 +396,7 @@ Changes:
 Changes:
 
 - Add `scrypt` function for KDF generation
-- Remove `bip39ToSeed`, we only use the `bip39ToMiniSecret` variant in Substrate
+- Remove `bip39ToSeed`, we only use the `bip39ToMiniSecret` variant in Bizinikiwi
 - Update ed25519-dalek to 1.0.0-pre.4
 - Rework generation based on latest wasm-pack generator
 
@@ -431,7 +431,7 @@ Changes:
 
 Changes:
 
-- Pull in schnorrkel 0.8.5 for full Substrate 2.x compatibility
+- Pull in schnorrkel 0.8.5 for full Bizinikiwi 2.x compatibility
 
 
 ## 0.14.1 Sep 09, 2019
@@ -452,7 +452,7 @@ Changes:
 
 Changes:
 
-- Remove deprecated `@polkadot/wasm-schnorrkel` & `@polkadot/wasm-dalek-ed25519` source (all combined in `@polkadot/wasm-crypto`, was kept for historical purposes)
+- Remove deprecated `@pezkuwi/wasm-schnorrkel` & `@pezkuwi/wasm-dalek-ed25519` source (all combined in `@pezkuwi/wasm-crypto`, was kept for historical purposes)
 - Security dependency bumps
 - Updated Rust `hex-literal` for recent versions of the compiler (used in tests only)
 
@@ -468,7 +468,7 @@ Changes:
 
 Changes:
 
-- w3f/schnorrkel updated to 0.1.1 as per substrate
+- w3f/schnorrkel updated to 0.1.1 as per bizinikiwi
 - Added known subkey signature test (Rust & JS)
 
 
@@ -483,7 +483,7 @@ Changes:
 
 Changes:
 
-- Pull ed25519 & sr25519 into `@polkadot/wasm-crypto` as well (smaller final size)
+- Pull ed25519 & sr25519 into `@pezkuwi/wasm-crypto` as well (smaller final size)
 - Disable build/publish of `wasm-dalek-ed25519` & `wasm-schnorrkel`
 - Improve error messaging, instead of `__wasm_malloc of null`
 

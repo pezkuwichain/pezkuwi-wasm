@@ -1,3 +1,3 @@
-# @polkadot/wasm-bridge
+# @pezkuwi/wasm-bridge
 
-A re-usable bridge between JS & WASM interfaces. It is used internally by `@polkadot/wasm-crypto`.
+A re-usable bridge between JS & WASM interfaces. It is used internally by `@pezkuwi/wasm-crypto`.

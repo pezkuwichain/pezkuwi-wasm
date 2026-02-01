@@ -1,10 +1,10 @@
 // Copyright 2019-2025 @pezkuwi/wasm-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-// Copyright 2019 Paritytech via https://github.com/paritytech/schnorrkel-js/
+// Copyright 2019 Paritytech via https://github.com/pezkuwichain/schnorrkel-js/
 //
-// Originally developed (as a fork) in https://github.com/polkadot-js/schnorrkel-js/
-// which was adpated from the initial https://github.com/paritytech/schnorrkel-js/
+// Originally developed (as a fork) in https://github.com/pezkuwi-js/schnorrkel-js/
+// which was adpated from the initial https://github.com/pezkuwichain/schnorrkel-js/
 // forked at commit eff430ddc3090f56317c80654208b8298ef7ab3f
 
 use merlin::Transcript;

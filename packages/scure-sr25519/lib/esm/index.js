@@ -1,11 +1,11 @@
 /**
- * Minimal JS implementation of sr25519 cryptography for Polkadot.
+ * Minimal JS implementation of sr25519 cryptography for Pezkuwi.
  *
  * Uses [Merlin](https://merlin.cool/index.html),
  * a transcript construction, built on [Strobe](https://strobe.sourceforge.io).
  * Merlin ensures two parties agree on the same state when communicating.
  *
- * More: https://wiki.polkadot.network/docs/learn-cryptography.
+ * More: https://wiki.pezkuwi.network/docs/learn-cryptography.
  */
 import { mod } from '@noble/curves/abstract/modular.js';
 import { aInRange, bitMask, bytesToNumberLE, equalBytes, isBytes, numberToBytesLE, } from '@noble/curves/abstract/utils.js';

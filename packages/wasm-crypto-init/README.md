@@ -1,3 +1,3 @@
-## @polkadot/wasm-crypto-init
+## @pezkuwi/wasm-crypto-init
 
-Internal `@polkadot/wasm-crypto` initialization functions for Browser, Node & RN.
+Internal `@pezkuwi/wasm-crypto` initialization functions for Browser, Node & RN.

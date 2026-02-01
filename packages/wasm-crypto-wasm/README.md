@@ -1,3 +1,3 @@
-## @polkadot/wasm-crypto-wasm
+## @pezkuwi/wasm-crypto-wasm
 
 Wasm build outputs.

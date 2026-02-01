@@ -1,7 +1,7 @@
-// Copyright 2019-2025 @pezkuwi/wasm-util authors & contributors
+// Copyright 2019-2026 @pezkuwi/wasm-util authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-/// <reference types="@polkadot/dev-test/globals.d.ts" />
+/// <reference types="@pezkuwi/dev-test/globals.d.ts" />
 
 import { base64Decode } from './base64.js';
 

@@ -17,8 +17,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pezkuwichain/pezkuwi-scure-sr25519"
+    "url": "https://github.com/pezkuwichain/pezkuwi-wasm.git",
+    "directory": "packages/scure-sr25519"
   },
+  "bugs": "https://github.com/pezkuwichain/pezkuwi-wasm/issues",
+  "homepage": "https://github.com/pezkuwichain/pezkuwi-wasm/tree/main/packages/scure-sr25519#readme",
   "author": "PezkuwiChain",
   "license": "MIT"
 }

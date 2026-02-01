@@ -1,4 +1,4 @@
-// Copyright 2019-2025 @pezkuwi/wasm-crypto authors & contributors
+// Copyright 2019-2026 @pezkuwi/wasm-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 /* global it */
@@ -52,7 +52,7 @@ export function secp256k1FromSeed1 (wasm) {
  */
 export function secp256k1FromSeed2 (wasm) {
   it('creates a known pair from seed (2)', () => {
-    // https://github.com/polkadot-js/wasm/issues/307
+    // https://github.com/pezkuwichain/pezkuwi-wasm/issues/307
     const seckey = new Uint8Array([
       203, 109, 249, 222, 30, 252, 167, 163, 153, 138, 142,
       173, 78, 2, 21, 157, 95, 169, 156, 62, 13, 79,

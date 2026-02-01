@@ -1,4 +1,4 @@
-// Copyright 2019-2025 @pezkuwi/wasm-crypto authors & contributors
+// Copyright 2019-2026 @pezkuwi/wasm-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 /* global describe */
@@ -15,7 +15,7 @@ import * as vrf from './vrf.js';
 export const tests = {
   // We place secp256k1 first, this allows the interaction with it in the
   // hashing (specifically scrypt) test not be an issue (ASM.js only)
-  // https://github.com/polkadot-js/wasm/issues/307
+  // https://github.com/pezkuwichain/pezkuwi-wasm/issues/307
   secp256k1,
   // eslint-disable-next-line sort-keys
   bip39,

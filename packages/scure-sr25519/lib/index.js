@@ -8,13 +8,13 @@ exports.sign = sign;
 exports.verify = verify;
 exports.getSharedSecret = getSharedSecret;
 /**
- * Minimal JS implementation of sr25519 cryptography for Polkadot.
+ * Minimal JS implementation of sr25519 cryptography for Pezkuwi.
  *
  * Uses [Merlin](https://merlin.cool/index.html),
  * a transcript construction, built on [Strobe](https://strobe.sourceforge.io).
  * Merlin ensures two parties agree on the same state when communicating.
  *
- * More: https://wiki.polkadot.network/docs/learn-cryptography.
+ * More: https://wiki.pezkuwi.network/docs/learn-cryptography.
  */
 const modular_js_1 = require("@noble/curves/abstract/modular.js");
 const utils_js_1 = require("@noble/curves/abstract/utils.js");

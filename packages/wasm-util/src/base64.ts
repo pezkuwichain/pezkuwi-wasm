@@ -1,4 +1,4 @@
-// Copyright 2019-2025 @pezkuwi/wasm-util authors & contributors
+// Copyright 2019-2026 @pezkuwi/wasm-util authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 // Use an array for our indexer - this is faster than using map access. In

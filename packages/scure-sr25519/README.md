@@ -28,7 +28,7 @@ const valid = verify(message, signature, publicKey);
 
 ## Difference from @scure/sr25519
 
-This package uses `bizinikiwi` as the signing context instead of `substrate`.
+This package uses `bizinikiwi` as the signing context instead of `bizinikiwi`.
 
 ## License
 

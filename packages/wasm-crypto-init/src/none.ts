@@ -1,4 +1,4 @@
-// Copyright 2019-2025 @pezkuwi/wasm-crypto-init authors & contributors
+// Copyright 2019-2026 @pezkuwi/wasm-crypto-init authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import type { InitFn } from '@pezkuwi/wasm-bridge/types';

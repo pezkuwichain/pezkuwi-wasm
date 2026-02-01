@@ -1,18 +1,18 @@
-# @polkadot/wasm-crypto
+# @pezkuwi/wasm-crypto
 
 Wrapper around crypto hashing functions
 
 ## Usage
 
-Install the package (also requires `@polkadot/util` for `TextEncoder` polyfills - not included here as a dependency to keep the tree lean)
+Install the package (also requires `@pezkuwi/util` for `TextEncoder` polyfills - not included here as a dependency to keep the tree lean)
 
-`yarn add @polkadot/wasm-crypto @polkadot/util`
+`yarn add @pezkuwi/wasm-crypto @pezkuwi/util`
 
 Use it -
 
 ```js
-import { u8aToHex } from '@polkadot/util';
-import { bip39Generate, bip39ToSeed, waitReady } from '@polkadot/wasm-crypto';
+import { u8aToHex } from '@pezkuwi/util';
+import { bip39Generate, bip39ToSeed, waitReady } from '@pezkuwi/wasm-crypto';
 
 // first wait until the WASM has been loaded (async init)
 await waitReady();

@@ -317,6 +317,7 @@ import { pbkdf2 as noblePbkdf2 } from '@noble/hashes/pbkdf2';
 import { blake2b as nobleBlake2b } from '@noble/hashes/blake2b';
 import { hmac } from '@noble/hashes/hmac';
 import { keccak_256, keccak_512 } from '@noble/hashes/sha3';
+import { scrypt as nobleScrypt } from '@noble/hashes/scrypt';
 
 function normalizeString(str: string): string {
   return (str || '').normalize('NFKD');
@@ -483,9 +484,11 @@ export function pbkdf2(data: Uint8Array, salt: Uint8Array, rounds: number): Uint
   return noblePbkdf2(nobleSha512, data, salt, { c: rounds, dkLen: 64 });
 }
 
-export function scrypt(_password: Uint8Array, _salt: Uint8Array, _log2n: number, _r: number, _p: number): Uint8Array {
-  // scrypt is rarely used - defer to @noble/hashes/scrypt if needed
-  throw new Error('scrypt not yet implemented - use @pezkuwi/util-crypto scryptSync instead');
+export function scrypt(password: Uint8Array, salt: Uint8Array, log2n: number, r: number, p: number): Uint8Array {
+  // Convert log2n to N (cost parameter)
+  // log2n is log2(N), so N = 2^log2n
+  const N = 1 << log2n;
+  return nobleScrypt(password, salt, { N, r, p, dkLen: 64 });
 }
 
 export function sha256(data: Uint8Array): Uint8Array {

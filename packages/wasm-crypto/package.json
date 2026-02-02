@@ -27,7 +27,7 @@
   ],
   "type": "module",
   "types": "./build/index.d.ts",
-  "version": "7.5.15",
+  "version": "7.5.18",
   "main": "./build/cjs/index.js",
   "module": "./build/index.js",
   "exports": {

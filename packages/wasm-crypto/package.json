@@ -1,17 +1,17 @@
 {
   "author": "PezkuwiChain <dev@pezkuwichain.io>",
-  "bugs": "https://github.com/pezkuwichain/pezkuwi-wasm/issues",
+  "bugs": "https://git.pezkuwichain.io/pezkuwichain/pezkuwi-wasm/issues",
   "description": "A wasm interface layer for use by @pezkuwi/util-crypto",
   "engines": {
     "node": ">=18"
   },
-  "homepage": "https://github.com/pezkuwichain/pezkuwi-wasm/tree/master/packages/wasm-crypto#readme",
+  "homepage": "https://git.pezkuwichain.io/pezkuwichain/pezkuwi-wasm/tree/master/packages/wasm-crypto#readme",
   "license": "Apache-2.0",
   "name": "@pezkuwi/wasm-crypto",
   "repository": {
     "directory": "packages/wasm-crypto",
     "type": "git",
-    "url": "https://github.com/pezkuwichain/pezkuwi-wasm.git"
+    "url": "https://git.pezkuwichain.io/pezkuwichain/pezkuwi-wasm.git"
   },
   "sideEffects": [
     "./build/initNone.js",

@@ -1,17 +1,17 @@
 {
   "author": "PezkuwiChain <dev@pezkuwichain.io>",
-  "bugs": "https://github.com/pezkuwichain/pezkuwi-wasm/issues",
+  "bugs": "https://git.pezkuwichain.io/pezkuwichain/pezkuwi-wasm/issues",
   "description": "Init handlers for wasm-crypto",
   "engines": {
     "node": ">=18"
   },
-  "homepage": "https://github.com/pezkuwichain/pezkuwi-wasm/tree/master/packages/wasm-crypto-init#readme",
+  "homepage": "https://git.pezkuwichain.io/pezkuwichain/pezkuwi-wasm/tree/master/packages/wasm-crypto-init#readme",
   "license": "Apache-2.0",
   "name": "@pezkuwi/wasm-crypto-init",
   "repository": {
     "directory": "packages/wasm-crypto-init",
     "type": "git",
-    "url": "https://github.com/pezkuwichain/pezkuwi-wasm.git"
+    "url": "https://git.pezkuwichain.io/pezkuwichain/pezkuwi-wasm.git"
   },
   "sideEffects": [
     "./build/packageDetect.js",

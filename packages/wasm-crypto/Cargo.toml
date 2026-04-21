@@ -8,7 +8,7 @@ edition = "2018"
 license = "Apache-2.0"
 name = "wasm"
 publish = false
-repository = "https://github.com/pezkuwichain/pezkuwi-wasm/"
+repository = "https://git.pezkuwichain.io/pezkuwichain/pezkuwi-wasm/"
 resolver = "2"
 version = "0.0.0"
 

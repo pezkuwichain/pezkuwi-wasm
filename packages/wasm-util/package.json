@@ -1,17 +1,17 @@
 {
   "author": "PezkuwiChain <dev@pezkuwichain.io>",
-  "bugs": "https://github.com/pezkuwichain/pezkuwi-wasm/issues",
+  "bugs": "https://git.pezkuwichain.io/pezkuwichain/pezkuwi-wasm/issues",
   "description": "Utilities used exclusively inside Wasm decoding",
   "engines": {
     "node": ">=18"
   },
-  "homepage": "https://github.com/pezkuwichain/pezkuwi-wasm/tree/master/packages/wasm-util#readme",
+  "homepage": "https://git.pezkuwichain.io/pezkuwichain/pezkuwi-wasm/tree/master/packages/wasm-util#readme",
   "license": "Apache-2.0",
   "name": "@pezkuwi/wasm-util",
   "repository": {
     "directory": "packages/wasm-util",
     "type": "git",
-    "url": "https://github.com/pezkuwichain/pezkuwi-wasm.git"
+    "url": "https://git.pezkuwichain.io/pezkuwichain/pezkuwi-wasm.git"
   },
   "sideEffects": [
     "./build/packageDetect.js",

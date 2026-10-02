@@ -64,7 +64,9 @@ export function bip39ToEntropy (wasm) {
  */
 export function bip39ToMiniSecret (wasm) {
   it('creates the correct minisecret from a mnemonic', () => {
-    const res = u8aToHex(wasm.bip39ToMiniSecret('legal winner thank year wave sausage worth useful legal winner thank yellow', 'Bizinikiwi'));
+    // The published substrate-bip39 vector: its password is the literal string below,
+    // not a product name, so a rename must not touch it.
+    const res = u8aToHex(wasm.bip39ToMiniSecret('legal winner thank year wave sausage worth useful legal winner thank yellow', 'Substrate'));
 
     // console.log('\tMIN', res);
 

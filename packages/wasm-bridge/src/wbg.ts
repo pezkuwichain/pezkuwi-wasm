@@ -127,9 +127,13 @@ export class Wbg<C extends WasmBaseInstance> {
     DEFAULT_CRYPTO.getRandomValues(this.#bridge.getU8a(ptr, len));
   };
 
-  /** @internal - bizinikiwi wasm hash (2 arg version) */
-  __wbg_getRandomValues_cd175915511f705e = (ptr: number, len: number): void => {
-    DEFAULT_CRYPTO.getRandomValues(this.#bridge.getU8a(ptr, len));
+  /**
+   * @internal - wasm-bindgen 0.2.90: both arguments are heap indices, the crypto
+   * object and a Uint8Array created on the JS side (__wbg_newwithlength), not a
+   * pointer into wasm memory. getrandom copies the filled array in afterwards.
+   */
+  __wbg_getRandomValues_cd175915511f705e = (cryptoIdx: number, arrIdx: number): void => {
+    (this.#bridge.getObject(cryptoIdx) as typeof DEFAULT_CRYPTO).getRandomValues(this.#bridge.getObject(arrIdx) as Uint8Array);
   };
 
   /** @internal - old hash for compatibility */
@@ -208,9 +212,12 @@ export class Wbg<C extends WasmBaseInstance> {
     // No-op, externref table is initialized by the runtime
   };
 
-  /** @internal - bizinikiwi wasm: memory accessor */
-  __wbindgen_memory = (): WebAssembly.Memory => {
-    return this.#bridge.wasm?.memory as WebAssembly.Memory;
+  /**
+   * @internal - wasm-bindgen 0.2.90: returns a heap index, which the wasm side
+   * passes back to __wbg_buffer. Returning the Memory itself coerces to 0.
+   */
+  __wbindgen_memory = (): number => {
+    return this.#bridge.addObject(this.#bridge.wasm?.memory);
   };
 
   /** @internal - bizinikiwi wasm: buffer accessor */

@@ -5,7 +5,7 @@
 
 set -e
 
-source scripts/rust-version.sh
+source "$(dirname "$0")/rust-version.sh"
 
 WSM=$PKG_NAME/build-wasm/wasm_bg.wasm
 OPT=$PKG_NAME/build-wasm/wasm_opt.wasm
@@ -45,14 +45,14 @@ mkdir -p $DENO_DIR
 cp $ASM $DENO_ASM
 
 # cleanup the generated asm, converting to cjs
-sed -i -e '/import {/d' $ASM
+sed -i -e '/^import /d' $ASM
 sed -i -e '1,/var retasmFunc = /!d' $ASM
-sed -i -e 's/var retasmFunc = .*/exports.asmJsInit = (wbg) => asmFunc(wbg);/g' $ASM
+sed -i -e 's/var retasmFunc = .*/exports.asmJsInit = (wbg) => asmFunc({ wbg });/g' $ASM
 
 # same as the cjs version, this time for deno
-sed -i -e '/import {/d' $DENO_ASM
+sed -i -e '/^import /d' $DENO_ASM
 sed -i -e '1,/var retasmFunc = /!d' $DENO_ASM
-sed -i -e 's/var retasmFunc = .*/export const asmJsInit = (wbg) => asmFunc(wbg);/g' $DENO_ASM
+sed -i -e 's/var retasmFunc = .*/export const asmJsInit = (wbg) => asmFunc({ wbg });/g' $DENO_ASM
 
 # cleanups
 rm -rf $PKG_NAME-asmjs/build/cjs/*-e

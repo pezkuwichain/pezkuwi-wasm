@@ -175,7 +175,9 @@ export class Bridge<C extends WasmBaseInstance> implements BridgeBase<C> {
    * @description Allocates an Uint8Array in the WASM interface
    */
   allocU8a (arg: Uint8Array): [number, number] {
-    const ptr = this.#wasm!.__wbindgen_malloc(arg.length * 1);
+    // wasm-bindgen >= 0.2.88 takes the alignment as a second argument; without it
+    // the Rust side builds a zero-aligned Layout and aborts with `unreachable`.
+    const ptr = this.#wasm!.__wbindgen_malloc(arg.length * 1, 1);
 
     this.getUint8().set(arg, ptr / 1);
 
@@ -199,7 +201,7 @@ export class Bridge<C extends WasmBaseInstance> implements BridgeBase<C> {
     const r1 = this.getInt32()[8 / 4 + 1];
     const ret = this.getU8a(r0, r1).slice();
 
-    this.#wasm!.__wbindgen_free(r0, r1 * 1);
+    this.#wasm!.__wbindgen_free(r0, r1 * 1, 1);
 
     return ret;
   }

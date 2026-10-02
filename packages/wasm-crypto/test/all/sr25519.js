@@ -56,9 +56,11 @@ export function sr25519DevFromSeed (wasm) {
  */
 export function sr25519VerifyExisting (wasm) {
   it('verifies a known signature', () => {
-    const PK = hexToU8a('0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d');
-    const MESSAGE = stringToU8a('I hereby verify that I control 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY');
-    const SIGNATURE = hexToU8a('0xb83881d3bd7302981ee1c504fe5b7b394682927131fc0846fd616bb40fa14d02640fd2aca785b4cb57904765c2e4e75f59a7dd30154c209964369912091f6981');
+    // Signed by @pezkuwi/wasm-crypto 7.5.18 under the "bizinikiwi" context, the build
+    // whose signatures the chain has been accepting. Same vector as src/rs/sr25519.rs.
+    const PK = hexToU8a('0x3288fbbb40584c61d8ee04e176fa339a1f1f6273b2a66d2eb12aafd1eb7b5e19');
+    const MESSAGE = stringToU8a('I hereby verify that I control this key');
+    const SIGNATURE = hexToU8a('0x065565b3c4cd1f2ff097a6372a67a8f7b3153e703378bf0acde013dcda79221485b3e7bf8d45e356a5a0fbf9cc332be54bff10158970daa5a5c55b15fb834181');
 
     const isValid = wasm.sr25519Verify(SIGNATURE, MESSAGE, PK);
 

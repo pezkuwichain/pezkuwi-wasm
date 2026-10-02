@@ -13,7 +13,7 @@ use schnorrkel::{
 use wasm_bindgen::prelude::*;
 
 // We must make sure that this is the same as declared in the bizinikiwi source code.
-// PezkuwiChain uses "bizinikiwi" as the signing context instead of "bizinikiwi".
+// PezkuwiChain signs sr25519 under the "bizinikiwi" context.
 const CTX: &'static [u8] = b"bizinikiwi";
 
 /// ChainCode construction helper
@@ -237,11 +237,24 @@ pub mod tests {
 		assert!(is_valid);
 	}
 
+	// The vectors below were produced by @pezkuwi/wasm-crypto 7.5.18, the build that
+	// signed every extension transaction the chain accepted before this one. A key
+	// derived differently, or a signature under another context, fails here.
+	const COMPAT_SEED: [u8; 32] = hex!("70657a6b7577692d7761736d2d766563746f722d736565642d30303031000000");
+	const COMPAT_PUBLIC: [u8; 32] = hex!("3288fbbb40584c61d8ee04e176fa339a1f1f6273b2a66d2eb12aafd1eb7b5e19");
+
+	#[test]
+	fn derives_the_same_public_key_as_the_previous_release() {
+		let keypair = ext_sr_from_seed(&COMPAT_SEED);
+
+		assert_eq!(&keypair[64..], &COMPAT_PUBLIC[..]);
+	}
+
 	#[test]
 	fn can_verify_known_message() {
-		let message = b"I hereby verify that I control 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY";
-		let public = hex!("d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d");
-		let signature = hex!("1037eb7e51613d0dcf5930ae518819c87d655056605764840d9280984e1b7063c4566b55bf292fcab07b369d01095879b50517beca4d26e6a65866e25fec0d83");
+		let message = b"I hereby verify that I control this key";
+		let public = COMPAT_PUBLIC;
+		let signature = hex!("065565b3c4cd1f2ff097a6372a67a8f7b3153e703378bf0acde013dcda79221485b3e7bf8d45e356a5a0fbf9cc332be54bff10158970daa5a5c55b15fb834181");
 		let is_valid = ext_sr_verify(&signature, message, &public);
 
 		assert!(is_valid);
@@ -250,8 +263,8 @@ pub mod tests {
 	#[test]
 	fn can_verify_known_wrapped_message() {
 		let message = b"<Bytes>message to sign</Bytes>";
-		let public = hex!("f84d048da2ddae2d9d8fd6763f469566e8817a26114f39408de15547f6d47805");
-		let signature = hex!("48ce2c90e08651adfc8ecef84e916f6d1bb51ebebd16150ee12df247841a5437951ea0f9d632ca165e6ab391532e75e701be6a1caa88c8a6bcca3511f55b4183");
+		let public = COMPAT_PUBLIC;
+		let signature = hex!("2c3ad2197b7e33c5750ec3613a31e0736acea97414a697a0624a98b2642cef095f445163b6bfcd4aac16e367a98a649bd9861db4d51da730da689b8f1eb19786");
 		let is_valid = ext_sr_verify(&signature, message, &public);
 
 		assert!(is_valid);

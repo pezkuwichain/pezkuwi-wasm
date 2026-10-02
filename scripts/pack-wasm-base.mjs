@@ -8,8 +8,9 @@ import { formatNumber } from '@pezkuwi/util';
 
 const PKG_NAME = process.env['PKG_NAME'];
 const DIR_DENO = `./${PKG_NAME}-wasm/build-deno/deno`;
+const DIR_ESM = `./${PKG_NAME}-wasm/build`;
 const DIR_CJS = `./${PKG_NAME}-wasm/build/cjs`;
-const HDR = `// Copyright 2019-${new Date().getFullYear()} @polkadot/${PKG_NAME}-wasm authors & contributors\n// SPDX-License-Identifier: Apache-2.0\n\n// Generated as part of the build, do not edit\n`;
+const HDR = `// Copyright 2019-${new Date().getFullYear()} @pezkuwi/${PKG_NAME}-wasm authors & contributors\n// SPDX-License-Identifier: Apache-2.0\n\n// Generated as part of the build, do not edit\n`;
 
 const data = fs.readFileSync(`./${PKG_NAME}/build-wasm/wasm_opt.wasm`);
 const compressed = Buffer.from(zlibSync(data, { level: 9 }));
@@ -25,6 +26,17 @@ exports.lenIn = ${compressed.length};
 exports.lenOut = ${data.length};
 
 exports.bytes = '${base64}';
+`);
+
+// The package exports `./bytes` from build/bytes.js for ESM consumers. Without this
+// write that file kept whatever src/bytes.js held, and could ship a different wasm
+// from the one in build/cjs.
+fs.writeFileSync(`${DIR_ESM}/bytes.js`, `${HDR}
+export const lenIn = ${compressed.length};
+
+export const lenOut = ${data.length};
+
+export const bytes = '${base64}';
 `);
 
 fs.writeFileSync(`${DIR_DENO}/bytes.js`, `${HDR}

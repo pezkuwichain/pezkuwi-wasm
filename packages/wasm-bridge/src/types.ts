@@ -37,9 +37,9 @@ export interface BridgeBase<C extends WasmBaseInstance> extends InitResult<C> {
 
 export interface WasmBindGen {
   __wbindgen_exn_store (a: number): void;
-  __wbindgen_free (a: number, b: number): void;
-  __wbindgen_malloc (a: number): number;
-  __wbindgen_realloc (a: number, b: number, c: number): number;
+  __wbindgen_free (ptr: number, len: number, align: number): void;
+  __wbindgen_malloc (len: number, align: number): number;
+  __wbindgen_realloc (ptr: number, oldLen: number, newLen: number, align: number): number;
 }
 
 export interface WasmBaseInstance extends WasmBindGen {

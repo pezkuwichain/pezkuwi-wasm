@@ -24,6 +24,13 @@ jobs:
       - name: Build JavaScript
         run: yarn build:js
 
+      # The package.json each build/ directory holds is what npm receives:
+      # every entry point must name a file that is there, with no ./build/ or
+      # ./cjs/cjs/ paths and no string spread into exports (what broke the
+      # January 2026 releases and 7.5.19).
+      - name: Check built manifests
+        run: python3 scripts/check-built-manifests.py . wasm-util wasm-bridge wasm-crypto-asmjs wasm-crypto-wasm wasm-crypto-init wasm-crypto
+
       - name: Lint
         run: yarn lint
 

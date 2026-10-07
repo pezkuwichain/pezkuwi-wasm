@@ -18,15 +18,15 @@
     "./packageDetect.cjs"
   ],
   "type": "module",
-  "version": "7.5.19",
+  "version": "7.5.20",
   "browser": "wasm.js",
   "main": "wasm.js",
   "react-native": "asm.js",
   "dependencies": {
-    "@pezkuwi/wasm-bridge": "7.5.19",
-    "@pezkuwi/wasm-crypto-asmjs": "7.5.19",
-    "@pezkuwi/wasm-crypto-wasm": "7.5.19",
-    "@pezkuwi/wasm-util": "7.5.19",
+    "@pezkuwi/wasm-bridge": "7.5.20",
+    "@pezkuwi/wasm-crypto-asmjs": "7.5.20",
+    "@pezkuwi/wasm-crypto-wasm": "7.5.20",
+    "@pezkuwi/wasm-util": "7.5.20",
     "tslib": "^2.7.0"
   },
   "devDependencies": {

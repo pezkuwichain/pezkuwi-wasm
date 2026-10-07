@@ -10,7 +10,9 @@ export default [
       'mod.ts',
       '**/bytes.js',
       '**/build/**',
-      '**/build-*/**'
+      '**/build-*/**',
+      // compiled sources only; there is nothing here to lint
+      'packages/scure-sr25519/lib/**'
     ]
   }
 ];

@@ -179,24 +179,28 @@ export class Wbg<C extends WasmBaseInstance> {
   /** @internal - new: Uint8Array.subarray */
   __wbg_subarray_a96e1fef17ed23cb = (idx: number, start: number, end: number): number => {
     const arr = this.#bridge.getObject(idx) as Uint8Array;
+
     return this.#bridge.addObject(arr.subarray(start, end));
   };
 
   /** @internal - bizinikiwi wasm hash */
   __wbg_subarray_7f7a652672800851 = (idx: number, start: number, end: number): number => {
     const arr = this.#bridge.getObject(idx) as Uint8Array;
+
     return this.#bridge.addObject(arr.subarray(start, end));
   };
 
   /** @internal - new: Uint8Array.length */
   __wbg_length_32ed9a279acd054c = (idx: number): number => {
     const arr = this.#bridge.getObject(idx) as Uint8Array;
+
     return arr.length;
   };
 
   /** @internal - bizinikiwi wasm hash */
   __wbg_length_f0764416ba5bb237 = (idx: number): number => {
     const arr = this.#bridge.getObject(idx) as Uint8Array;
+
     return arr.length;
   };
 
@@ -204,6 +208,7 @@ export class Wbg<C extends WasmBaseInstance> {
   __wbg_prototypesetcall_bdcdcc5842e4d77d = (destIdx: number, srcIdx: number, offset: number): void => {
     const dest = this.#bridge.getObject(destIdx) as Uint8Array;
     const src = this.#bridge.getObject(srcIdx) as Uint8Array;
+
     dest.set(src, offset);
   };
 
@@ -223,12 +228,14 @@ export class Wbg<C extends WasmBaseInstance> {
   /** @internal - bizinikiwi wasm: buffer accessor */
   __wbg_buffer_5d1b598a01b41a42 = (memIdx: number): number => {
     const mem = this.#bridge.getObject(memIdx) as WebAssembly.Memory;
+
     return this.#bridge.addObject(mem.buffer);
   };
 
   /** @internal - bizinikiwi wasm: Uint8Array constructor */
   __wbg_new_ace717933ad7117f = (bufferIdx: number): number => {
     const buffer = this.#bridge.getObject(bufferIdx) as ArrayBuffer;
+
     return this.#bridge.addObject(new Uint8Array(buffer));
   };
 
@@ -236,6 +243,7 @@ export class Wbg<C extends WasmBaseInstance> {
   __wbg_set_74906aa30864df5a = (destIdx: number, srcIdx: number, offset: number): void => {
     const dest = this.#bridge.getObject(destIdx) as Uint8Array;
     const src = this.#bridge.getObject(srcIdx) as Uint8Array;
+
     dest.set(src, offset);
   };
 }

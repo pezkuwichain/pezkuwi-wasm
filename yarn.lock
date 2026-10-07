@@ -541,34 +541,34 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pezkuwi/dev-test@npm:^0.85.3":
-  version: 0.85.7
-  resolution: "@pezkuwi/dev-test@npm:0.85.7"
+"@pezkuwi/dev-test@npm:^0.85.12":
+  version: 0.85.12
+  resolution: "@pezkuwi/dev-test@npm:0.85.12"
   dependencies:
     jsdom: "npm:^24.0.0"
     tslib: "npm:^2.7.0"
-  checksum: 10/7e4f51e9ed3f0ec40606669dd74df9dbffd878f4d527a93b306ce14fb84b48ae1b2eafbc29b5d4ce794d9fabb2deb7c173c60d370f03abe40b002e4d2e484132
+  checksum: 10/734a41e8e6160095d9a7cd4edd005beba6b536e13bb6a0698621a7b1c14eac6df8034ac399fb48fb5ffff732d9feb9a2eec0f65fd0d06967f119ed9457764c42
   languageName: node
   linkType: hard
 
-"@pezkuwi/dev-ts@npm:^0.85.3":
-  version: 0.85.7
-  resolution: "@pezkuwi/dev-ts@npm:0.85.7"
+"@pezkuwi/dev-ts@npm:^0.85.12":
+  version: 0.85.12
+  resolution: "@pezkuwi/dev-ts@npm:0.85.12"
   dependencies:
     json5: "npm:^2.2.3"
     tslib: "npm:^2.7.0"
     typescript: "npm:^5.5.4"
-  checksum: 10/d67a2345cdde35c20f82af250fddc31367c16c0906ee78a005a844fcc3f68310ba8877e4ff845ca4b2c084544f31c2152249a002a666c12da8acfc7b632ce589
+  checksum: 10/1f84af81f905aa9c0025cde62aa20332750a0c4d7d79badca573ce2d672ed8485f41b9b6739eba0fb30dd8b5fb6c648247b65136e0bdd8e0278068185fe08fc8
   languageName: node
   linkType: hard
 
-"@pezkuwi/dev@npm:^0.85.7":
-  version: 0.85.7
-  resolution: "@pezkuwi/dev@npm:0.85.7"
+"@pezkuwi/dev@npm:^0.85.12":
+  version: 0.85.12
+  resolution: "@pezkuwi/dev@npm:0.85.12"
   dependencies:
     "@eslint/js": "npm:^8.56.0"
-    "@pezkuwi/dev-test": "npm:^0.85.3"
-    "@pezkuwi/dev-ts": "npm:^0.85.3"
+    "@pezkuwi/dev-test": "npm:^0.85.12"
+    "@pezkuwi/dev-ts": "npm:^0.85.12"
     "@rollup/plugin-alias": "npm:^5.1.1"
     "@rollup/plugin-commonjs": "npm:^25.0.8"
     "@rollup/plugin-dynamic-import-vars": "npm:^2.1.5"
@@ -633,7 +633,7 @@ __metadata:
     pezkuwi-exec-rollup: scripts/pezkuwi-exec-rollup.mjs
     pezkuwi-exec-tsc: scripts/pezkuwi-exec-tsc.mjs
     pezkuwi-exec-webpack: scripts/pezkuwi-exec-webpack.mjs
-  checksum: 10/8cda71662ea0cf9999de0644459bf0343a2c8c4cc3e8f29657415ef631cb5df0b37aca994bd7249da6bb4c240a73bb013f397d904beda522cc7d915af79883df
+  checksum: 10/bdc08fe9847b60701341ee9ea4fcfb9e4bfa2bee0812698d0bb39aaaace520a8f1832718dc774f9eac3fe893a192b0dcac44fa2d05fbd9fcaf4b9c0f23aac1e4
   languageName: node
   linkType: hard
 
@@ -7988,7 +7988,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@pezkuwi/dev": "npm:^0.85.7"
+    "@pezkuwi/dev": "npm:^0.85.12"
     "@pezkuwi/util": "npm:^14.0.1"
     "@types/node": "npm:^20.16.1"
     fflate: "npm:^0.8.2"

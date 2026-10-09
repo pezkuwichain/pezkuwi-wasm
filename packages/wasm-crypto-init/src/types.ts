@@ -3,8 +3,6 @@
 
 import type { WasmBaseInstance } from '@pezkuwi/wasm-bridge/types';
 
-/* eslint-disable camelcase */
-
 // wasm-pack build output (formatted) from pkg/wasm_bg.d.ts
 export interface WasmCryptoInstance extends WasmBaseInstance {
   // exposed functions

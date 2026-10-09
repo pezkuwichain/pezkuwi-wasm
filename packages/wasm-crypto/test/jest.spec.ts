@@ -6,7 +6,7 @@
 // NOTE We don't use ts-expect-error here since the build folder may or may
 // not exist (so the error may or may not be there)
 //
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+
 // NOTE We don't use ts-expect-error here since the build folder may or may
 // not exist (so the error may or may not be there)
 //

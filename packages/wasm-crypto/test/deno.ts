@@ -2,12 +2,8 @@
 // SPDX-License-Identifier: Apache-2.0
 
 // This is a Deno file, so we can allow .ts imports
-/* eslint-disable import/extensions */
+/* eslint-disable import-x/extensions */
 
-// NOTE We don't use ts-expect-error here since the build folder may or may
-// not exist (so the error may or may not be there)
-//
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // NOTE We don't use ts-expect-error here since the build folder may or may
 // not exist (so the error may or may not be there)
 //
@@ -18,9 +14,12 @@ import { initRun, tests } from './all/index.js';
 
 type Tests = Record<string, (wasm: unknown) => void>;
 
-declare const globalThis: {
+// The test runner's `it`, read through a typed alias rather than by
+// redeclaring the global.
+const testGlobal = globalThis as unknown as {
   it: (name: string, fn: () => void) => unknown;
 };
+
 declare const Deno: {
   test: (name: string, test: () => unknown) => unknown;
 };
@@ -28,7 +27,7 @@ declare const Deno: {
 await initRun('wasm', wasm);
 
 // We use it to denote the tests
-globalThis.it = (name: string, fn: () => void) => Deno.test(name, () => fn());
+testGlobal.it = (name: string, fn: () => void) => Deno.test(name, () => fn());
 
 Object
   .entries<Tests>(tests)

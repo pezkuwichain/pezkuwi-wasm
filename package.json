@@ -43,7 +43,7 @@
     "test:wasm-crypto:rust": "cd packages/wasm-crypto && RUST_BACKTRACE=full cargo test --release -- --test-threads=1 --nocapture"
   },
   "devDependencies": {
-    "@pezkuwi/dev": "^0.85.12",
+    "@pezkuwi/dev": "^0.86.0",
     "@pezkuwi/util": "^14.0.1",
     "@types/node": "^20.16.1",
     "fflate": "^0.8.2"

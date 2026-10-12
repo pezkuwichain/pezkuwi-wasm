@@ -30,7 +30,7 @@ pub fn ext_secp_from_seed(seed: &[u8]) -> Vec<u8> {
             let mut res = vec![];
             let pubkey = PublicKey::from_secret_key(SECP256K1, &s);
 
-            res.extend_from_slice(&s.serialize_secret());
+            res.extend_from_slice(&s.secret_bytes());
             res.extend_from_slice(&pubkey.serialize());
 
             res
@@ -43,7 +43,7 @@ pub fn ext_secp_from_seed(seed: &[u8]) -> Vec<u8> {
 pub fn ext_secp_recover(hash: &[u8], sig: &[u8], rec: i32) -> Vec<u8> {
     match RecoveryId::from_i32(rec) {
         Ok(r) => match (
-            Message::from_slice(hash),
+            Message::from_digest_slice(hash),
             RecoverableSignature::from_compact(&sig, r),
         ) {
             (Ok(m), Ok(s)) => {
@@ -69,7 +69,7 @@ pub fn ext_secp_recover(hash: &[u8], sig: &[u8], rec: i32) -> Vec<u8> {
 
 #[wasm_bindgen]
 pub fn ext_secp_sign(hash: &[u8], seckey: &[u8]) -> Vec<u8> {
-    match (Message::from_slice(hash), SecretKey::from_slice(seckey)) {
+    match (Message::from_digest_slice(hash), SecretKey::from_slice(seckey)) {
         (Ok(m), Ok(s)) => {
             let mut res = vec![];
             let (rec, sig) = SECP256K1.sign_ecdsa_recoverable(&m, &s).serialize_compact();

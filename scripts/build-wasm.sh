@@ -16,6 +16,11 @@ DENO_ASM=$DENO_DIR/data.js
 # build new via wasm-pack
 echo "*** Building Rust sources"
 cd $PKG_NAME
+
+# Panic messages carry source paths. Without this the published wasm names the
+# home directory of whoever built it; with it the bytes no longer depend on
+# where the toolchain, the registry or the checkout live.
+export RUSTFLAGS="${RUSTFLAGS:-} --remap-path-prefix=$(rustc --print sysroot)=/rustc --remap-path-prefix=${CARGO_HOME:-$HOME/.cargo}=/cargo --remap-path-prefix=$PWD=/build"
 if [ "$RUST_VER" == "stable" ]; then
   RUSTC_BOOTSTRAP=1 cargo build --target wasm32-unknown-unknown --release -Z build-std=std,panic_abort
 else

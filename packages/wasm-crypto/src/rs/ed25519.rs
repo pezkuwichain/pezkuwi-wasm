@@ -1,32 +1,21 @@
 // Copyright 2019-2025 @pezkuwi/wasm-crypto authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-use std::convert::TryFrom;
-use ed25519_dalek::{Keypair, PublicKey, SecretKey, Signature, Signer as _, Verifier as _};
+use std::convert::TryInto;
+use ed25519_dalek::{Signature, Signer as _, SigningKey, Verifier as _, VerifyingKey};
 use wasm_bindgen::prelude::*;
 
-/// Keypair helper function
-fn new_from_seed(seed: &[u8]) -> Keypair {
-	match SecretKey::from_bytes(seed) {
-		Ok(secret) => {
-			let public: PublicKey = (&secret).into();
-
-			Keypair { secret: secret, public: public }
-		},
+fn new_from_seed(seed: &[u8]) -> SigningKey {
+	match seed.try_into() {
+		Ok(secret) => SigningKey::from_bytes(secret),
 		_ => panic!("Invalid seed provided.")
 	}
 }
 
-/// Generate a key pair.
-///
-/// * seed: UIntArray with 32 element
-///
-/// returned vector is the concatenation of first the seed (32 bytes)
-/// followed by the public key (32) bytes, as the full secret keys.
 #[wasm_bindgen]
 pub fn ext_ed_from_seed(seed: &[u8]) -> Vec<u8> {
 	new_from_seed(seed)
-		.to_bytes()
+		.to_keypair_bytes()
 		.to_vec()
 }
 
@@ -57,8 +46,8 @@ pub fn ext_ed_sign(_: &[u8], seckey: &[u8], message: &[u8]) -> Vec<u8> {
 /// * pubkey: UIntArray with 32 element
 #[wasm_bindgen]
 pub fn ext_ed_verify(signature: &[u8], message: &[u8], pubkey: &[u8]) -> bool {
-	match (Signature::try_from(signature), PublicKey::from_bytes(pubkey)) {
-		(Ok(s), Ok(k)) => k
+	match (Signature::from_slice(signature), pubkey.try_into().map(VerifyingKey::from_bytes)) {
+		(Ok(s), Ok(Ok(k))) => k
 			.verify(message, &s)
 			.is_ok(),
 		_ => false

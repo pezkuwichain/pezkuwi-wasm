@@ -160,7 +160,7 @@ pub fn ext_sr_agree(pubkey: &[u8], secret: &[u8]) -> Vec<u8> {
 
 			key.copy_from_slice(&s.to_bytes()[0..32]);
 
-			match (Scalar::from_canonical_bytes(key), PublicKey::from_bytes(pubkey)) {
+			match (Option::<Scalar>::from(Scalar::from_canonical_bytes(key)), PublicKey::from_bytes(pubkey)) {
 				(Some(n), Ok(k)) => (&n * k.as_point())
 					.compress().0
 					.to_vec(),

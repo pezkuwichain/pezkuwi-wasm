@@ -8,7 +8,7 @@
 // forked at commit eff430ddc3090f56317c80654208b8298ef7ab3f
 
 use merlin::Transcript;
-use schnorrkel::{signing_context, vrf::{VRFOutput, VRFProof}, PublicKey, SecretKey};
+use schnorrkel::{signing_context, vrf::{VRFPreOut, VRFProof}, PublicKey, SecretKey};
 use wasm_bindgen::prelude::*;
 
 /// Size of VRF output, bytes
@@ -80,7 +80,7 @@ pub fn ext_vrf_sign(secret: &[u8], ctx: &[u8], msg: &[u8], extra: &[u8]) -> Vec<
 /// * out_and_proof: 96-byte output & proof array from the ext_sign function.
 #[wasm_bindgen]
 pub fn ext_vrf_verify(pubkey: &[u8], ctx: &[u8], msg: &[u8], extra: &[u8], out: &[u8]) -> bool {
-	match (PublicKey::from_bytes(pubkey), VRFOutput::from_bytes(&out[..OUTPUT_SIZE]), VRFProof::from_bytes(&out[OUTPUT_SIZE..RESULT_SIZE])) {
+	match (PublicKey::from_bytes(pubkey), VRFPreOut::from_bytes(&out[..OUTPUT_SIZE]), VRFProof::from_bytes(&out[OUTPUT_SIZE..RESULT_SIZE])) {
 		(Ok(k), Ok(o), Ok(p)) => k
 			.vrf_verify_extra(signing_context(ctx).bytes(msg), &o, &p, new_transcript(extra))
 			.is_ok(),

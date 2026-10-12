@@ -31,6 +31,15 @@ export class Wbg<C extends WasmBaseInstance> {
     throw new Error('abort');
   };
 
+  /**
+   * @internal - the one randomness import of wasm-crypto from 7.5.21 on: fill
+   * len bytes at ptr in wasm memory. A fixed name, not a wasm-bindgen hash, so
+   * it survives crate and bindgen upgrades.
+   */
+  ext_fill_random = (ptr: number, len: number): void => {
+    DEFAULT_CRYPTO.getRandomValues(this.#bridge.getU8a(ptr, len));
+  };
+
   /** @internal - new hash */
   __wbg___wbindgen_is_undefined_9e4d92534c42d778 = (idx: number): boolean => {
     return this.#bridge.getObject(idx) === undefined;

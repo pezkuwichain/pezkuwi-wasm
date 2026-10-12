@@ -46,9 +46,10 @@
     "@pezkuwi/dev": "^0.86.0",
     "@pezkuwi/util": "^14.0.1",
     "@types/node": "^20.16.1",
-    "fflate": "^0.8.2"
+    "fflate": "^0.8.3"
   },
   "resolutions": {
+    "braces": "npm:@pezkuwi/braces@^3.0.4",
     "typescript": "^5.5.4"
   }
 }

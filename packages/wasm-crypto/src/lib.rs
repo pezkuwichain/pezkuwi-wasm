@@ -22,3 +22,6 @@ pub mod sr25519;
 
 #[path = "rs/vrf.rs"]
 pub mod vrf;
+
+#[path = "rs/kat.rs"]
+pub mod kat;

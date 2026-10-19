@@ -27,6 +27,7 @@
     "build:js": "./scripts/build-js.sh",
     "build:release": "pezkuwi-ci-ghact-build",
     "build:rollup": "pezkuwi-exec-rollup --config",
+    "build:scure-sr25519": "node node_modules/typescript/bin/tsc -p packages/scure-sr25519/tsconfig.json && node node_modules/typescript/bin/tsc -p packages/scure-sr25519/tsconfig.cjs.json",
     "build:wasm": "./scripts/build.sh",
     "clean": "./scripts/clean.sh",
     "deno": "yarn deno:build && yarn deno:check",

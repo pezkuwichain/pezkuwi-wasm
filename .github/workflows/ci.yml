@@ -37,6 +37,11 @@ jobs:
       - name: Lint
         run: yarn lint
 
+      # scure-sr25519 ships committed compiled output; it must be a build of
+      # the index.ts beside it, not hand-edited JavaScript.
+      - name: Check scure-sr25519 is built from its source
+        run: ./scripts/check-scure-sr25519.sh
+
   test:
     runs-on: ubuntu-latest
     steps:

@@ -11,8 +11,10 @@ export default [
       '**/bytes.js',
       '**/build/**',
       '**/build-*/**',
-      // compiled sources only; there is nothing here to lint
-      'packages/scure-sr25519/lib/**'
+      // compiled from index.ts; there is nothing here to lint
+      'packages/scure-sr25519/lib/**',
+      // upstream @scure/sr25519 source, kept in its own style; see the package README
+      'packages/scure-sr25519/index.ts'
     ]
   }
 ];
